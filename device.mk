@@ -13,4 +13,8 @@ CDMA_CARRIER_NUMERIC := 310012
 
 include device/lge/thunderc-common/device.mk
 
+# Recent CM9 updates have pushed the recovery size beyond what the VS660
+# will ever be able to handle, so don't bother pretending...
+RECOVERY_REMOVE_FILES += res sbin
+
 DEVICE_PACKAGE_OVERLAYS += device/lge/VS660/overlay
